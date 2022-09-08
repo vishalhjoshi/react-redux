@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+:root {
+  --primary-color: #f60f20;
+  --secondary-color: #1b206e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  color: #111;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.text {
+  margin: 20px 0 10px;
+  font-size: 1.1rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  padding: 100px;
+  margin-top: 60px;
+}
+
+.posts {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.posts .post {
+  padding: 30px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+  border-radius: 4px;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.posts .post:hover {
+  background-color: #e2e8f0;
+  transform: scale(1.025, 1.025);
+}
+
+.posts .post h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: var(--secondary-color);
+}
+
+.posts .post .icon img {
+  max-width: 100px;
+}
+
+@media (max-width: 768px) {
+  .posts {
+    grid-template-columns: 1fr;
+  }
+
+  .posts .post {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
